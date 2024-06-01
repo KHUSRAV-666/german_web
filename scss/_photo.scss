@@ -1,0 +1,45 @@
+@import 'variables';
+
+.photo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1760px) {
+    .photo {
+        img {
+            max-width: 530px;
+        }
+    }
+}
+
+@media (max-width: 1560px) {
+    .photo {
+        img {
+            max-width: 400px;
+        }
+    }
+}
+
+@media (max-width: $xl) {
+    .photo {
+        flex-direction: column;
+        gap: 30px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .photo {
+        gap: 20px;
+    }
+}
+
+@media (max-width: $sx) {
+    .photo {
+        gap: 10px;
+    }
+}

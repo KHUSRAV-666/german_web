@@ -1,0 +1,111 @@
+@import 'variables';
+
+.boutiques {
+    margin-bottom: 40px;
+
+    h2 {
+        max-width: 100%;
+        font-size: 48px;
+        color: #151516;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .boutiques__wrapper {
+        display: grid;
+        grid-template-columns: 6fr 5fr;
+        gap: 30px;
+
+        .swiper {
+            &.boutiques__swiper {
+                width: 100%;
+
+                .boutiques__pagination {
+                    bottom: 5px;
+
+                    .swiper-pagination-bullet {
+                        width: 10px;
+                        height: 10px;
+                        background-color: #4d4d4d;
+                    }
+
+                    .swiper-pagination-bullet-active {
+                        background-color: #CD3B31;
+                    }
+                }
+
+                .boutiques__button-next,
+                .boutiques__button-prev {
+                    top: unset;
+                    bottom: 0;
+
+                    &::after {
+                        content: "";
+                        background-image: url("/assets/icons/arrow.svg");
+                        width: 30px;
+                        height: 20px;
+                        background-repeat: no-repeat;
+                        background-size: 100% auto;
+                        background-position: center;
+                    }
+                }
+
+                .boutiques__button-next {
+                    right: calc(50% - 80px);
+
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .boutiques__button-prev {
+                    left: calc(50% - 80px);
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: $xl) {
+    .boutiques {
+        .boutiques__wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .swiper {
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .boutiques {
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .boutiques__wrapper {
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: $sx) {
+    .boutiques {
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .boutiques__wrapper {
+            gap: 15px;
+        }
+    }
+}

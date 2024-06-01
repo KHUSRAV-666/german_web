@@ -1,0 +1,185 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+ol[class],
+ul {
+    padding: 0;
+}
+
+blockquote,
+body,
+dd,
+dl,
+figcaption,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+p,
+ul {
+    margin: 0;
+}
+
+ul[class] {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.show-mob {
+    display: none;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    background-color: #fff;
+    color: #191b1d;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+    color: #191b1d;
+    max-width: 640px;
+}
+
+.container {
+    max-width: 1780px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.base__search {
+    position: relative;
+    border-radius: 26px;
+    box-shadow: 2px 4px 11px rgb(0 0 0 / 17%);
+    width: fit-content;
+
+    input {
+        padding: 7px 15px;
+        border: none;
+        border-radius: 26px;
+
+        &::placeholder {
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        &:focus-visible {
+            outline: 1px solid #CD3B31;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-image: url("/assets/icons/search.svg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        transform: translate(-30px, -50%);
+    }
+}
+
+ul {
+    margin-left: 20px;
+
+    li {
+        color: red;
+        padding: 6px 0;
+
+        span {
+            font-size: 14px;
+            color: #000;
+        }
+    }
+}
+
+.loader__wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #191b1d;
+    z-index: 9999;
+    display: none;
+}
+
+.loader__wrapper {
+    .active {
+        display: block;
+    }
+}
+
+.loader {
+    width: 78px;
+    height: 78px;
+    border: 5px solid #fff;
+    border-bottom-color: #ffda17;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

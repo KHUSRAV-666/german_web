@@ -1,0 +1,147 @@
+.rent {
+    margin: 130px 0 40px 0;
+
+    .rent__wrapper {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 30px;
+
+        .rent-img {
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .rent-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h2 {
+                font-size: 48px;
+                font-weight: 700;
+                color: #151516;
+                margin-bottom: 30px;
+            }
+
+            .rent-info__address {
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: 14px;
+                color: #000;
+            }
+
+            .rent-info__download {
+                position: relative;
+                font-size: 24px;
+                color: #151516;
+                margin-bottom: 60px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #CD3B31
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    content: "";
+                    width: 32px;
+                    height: 32px;
+                    background-image: url("/assets/icons/download.svg");
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    background-position: center;
+                    transform: translate(10px, -50%);
+                }
+            }
+
+            .rent-info__advantage {
+                h4 {
+                    font-size: 24px;
+                    color: #151516;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $xl) {
+    .rent {
+        .rent__wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .rent {
+        .rent__wrapper {
+            .rent-info {
+                h2 {
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+
+                .rent-info__address {
+                    margin-bottom: 20px;
+                }
+
+                .rent-info__download {
+                    font-size: 22px;
+                    margin-bottom: 40px;
+                }
+
+                .rent-info__advantage {
+                    h4 {
+                        font-size: 22px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $sx) {
+    .rent {
+        .rent__wrapper {
+            gap: 20px;
+
+            .rent-info {
+                h2 {
+                    font-size: 24px;
+                    margin-bottom: 15px;
+                }
+
+                .rent-info__address {
+                    margin-bottom: 15px;
+                }
+
+                .rent-info__download {
+                    font-size: 18px;
+                    margin-bottom: 30px;
+
+                    &::after {
+                        width: 25px;
+                        height: 25px;
+                    }
+
+                }
+
+                .rent-info__advantage {
+                    h4 {
+                        font-size: 18px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
